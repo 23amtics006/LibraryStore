@@ -1,0 +1,32 @@
+@model IEnumerable<LibraryStore.Models.BorrowRecord>
+
+<h3>My Borrowed Books</h3>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Book</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.Book.Title</td>
+                <td>@record.BorrowDate.ToShortDateString()</td>
+                <td>@(record.ReturnDate?.ToShortDateString() ?? "-")</td>
+                <td>@(record.IsReturned ? "Returned" : "Borrowed")</td>
+                <td>
+                    @if (!record.IsReturned)
+                    {
+                        <a href="/Borrow/Return/@record.Id" class="btn btn-sm btn-danger">Return</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

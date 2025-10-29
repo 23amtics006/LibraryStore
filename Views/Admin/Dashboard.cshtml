@@ -1,0 +1,32 @@
+@{
+    var stats = ViewBag.Stats;
+}
+
+<h3 class="mb-4">Admin Dashboard</h3>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <h4>@stats.Users</h4>
+                <p>Users</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <h4>@stats.Books</h4>
+                <p>Books</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <h4>@stats.Borrowed</h4>
+                <p>Currently Borrowed</p>
+            </div>
+        </div>
+    </div>
+</div>

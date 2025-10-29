@@ -1,0 +1,83 @@
+
+/* === Added by conversion script: Light theme with green accent === */
+:root{
+  --accent: #2fa84f;
+  --accent-dark: #257a3f;
+  --bg: #ffffff;
+  --text: #222222;
+}
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+/* Primary accents */
+a, a:visited, .navbar a, .nav a { color: var(--accent) !important; }
+.btn, .btn-primary, button, input[type="submit"] { background-color: var(--accent) !important; border-color: var(--accent) !important; color: #fff !important; }
+.btn:hover, .btn-primary:hover { background-color: var(--accent-dark) !important; border-color: var(--accent-dark) !important; }
+.header, .navbar, .site-header { background-color: transparent !important; }
+footer { background-color: transparent !important; color: #555 !important; }
+
+
+/* ===== Basic Body Styling ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background: #f7f8fa;
+    color: #333;
+    transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* ===== Main Content Wrapper ===== */
+main {
+    flex: 1;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+/* ===== Footer Styling ===== */
+.footer {
+    background: linear-gradient(90deg, #007BFF, #6610f2);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* ===== Links & Buttons ===== */
+a, button {
+    transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+    transform: scale(1.05);
+    color: #007bff;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Card / Book Effects ===== */
+.card, .book-item {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover, .book-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
